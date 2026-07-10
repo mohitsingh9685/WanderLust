@@ -1,15 +1,21 @@
 {
   "name": "major-project-1",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A full-stack hotel listing app built with Express, EJS, and MongoDB.",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.21.2",

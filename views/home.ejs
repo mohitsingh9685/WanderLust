@@ -1,0 +1,55 @@
+<% layout("/layouts/boilerplate") %>
+
+<section class="home-hero">
+    <div class="home-hero__content">
+        <p class="eyebrow">Curated Stays</p>
+        <h1>Find your next memorable stay.</h1>
+        <p class="home-hero__copy">
+            Explore hand-picked homes, cabins, villas, and city apartments from one simple dashboard.
+        </p>
+        <div class="home-hero__actions">
+            <a href="/listings" class="btn btn-primary brand-btn">Explore stays</a>
+            <a href="/listings/new" class="btn btn-outline-light hero-secondary-btn">Add listing</a>
+        </div>
+    </div>
+</section>
+
+<section class="stats-row" aria-label="WanderLust overview">
+    <article class="stat-tile">
+        <span><%= totalListings %></span>
+        <p>Active listings</p>
+    </article>
+    <article class="stat-tile">
+        <span><%= totalCountries %></span>
+        <p>Countries</p>
+    </article>
+    <article class="stat-tile">
+        <span>&#8377;<%= avgPrice.toLocaleString("en-IN") %></span>
+        <p>Average nightly price</p>
+    </article>
+</section>
+
+<section class="section-heading-row">
+    <div>
+        <p class="eyebrow">Recently Added</p>
+        <h2>Fresh stays in your collection</h2>
+    </div>
+    <a href="/listings" class="text-action">View all</a>
+</section>
+
+<div class="listing-grid">
+    <% for(let listing of featuredListings) { %>
+        <a href="/listings/<%= listing._id %>" class="listing-card">
+            <div class="listing-card__media">
+                <img src="<%= listing.image %>" alt="<%= listing.title %>">
+            </div>
+            <div class="listing-card__body">
+                <div>
+                    <h3><%= listing.title %></h3>
+                    <p><i class="fa-solid fa-location-dot"></i> <%= listing.location %>, <%= listing.country %></p>
+                </div>
+                <strong>&#8377;<%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %><span>/night</span></strong>
+            </div>
+        </a>
+    <% } %>
+</div>
