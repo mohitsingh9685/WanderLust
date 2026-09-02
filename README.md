@@ -1,14 +1,11 @@
 WanderLust 🏡
 
-A full-stack vacation rental web application inspired by Airbnb, where users can explore, create, edit, and manage property listings. The application provides secure user authentication, property management, and a responsive interface built using the MVC architecture.
+A full-stack vacation rental web application inspired by Airbnb, where users can explore, create, edit, and manage property listings. 
 
 🚀 Features
 
-* User registration and login authentication
-* Secure authorization for protected routes
 * Create, edit, update, and delete property listings
 * View detailed information for each listing
-* Server-side form validation
 * Centralized error handling
 * Responsive UI built with Bootstrap
 * RESTful routing using Express.js
@@ -39,7 +36,6 @@ Database
 Other Tools
 
 * Express Session
-* Passport.js (Authentication)
 * Connect Flash
 * Method Override
 * Joi (Validation)
@@ -56,12 +52,7 @@ WanderLust/
 │
 ├── app.js
 ├── package.json
-├── cloudConfig.js
-├── middleware.js
-│
 ├── models/
-├── routes/
-├── controllers/
 ├── views/
 ├── public/
 ├── utils/
@@ -91,15 +82,7 @@ Create a .env file in the root directory.
 
 Example:
 
-ATLASDB_URL=your_mongodb_connection_string
-SECRET=your_secret_key
-# If using Cloudinary
-CLOUD_NAME=your_cloud_name
-CLOUD_API_KEY=your_api_key
-CLOUD_API_SECRET=your_api_secret
-
-⸻
-
+MONGODB_URL=your_mongodb_connection_string
 ▶️ Running the Project
 
 Start the development server:
@@ -135,28 +118,13 @@ The application follows the Model-View-Controller (MVC) design pattern.
 * Routes – API and page routing
 * Middleware – Authentication, validation, and error handling
 
-⸻
+📸 Pages
 
-🔒 Authentication
-
-* User Registration
-* User Login
-* User Logout
-* Session-based Authentication
-* Protected Routes
-* Authorization for Listing Management
-
-⸻
-
-📸 Screenshots
-
-Add screenshots of:
+pages of:
 
 * Home Page
 * Listings Page
 * Listing Details
-* Login Page
-* Signup Page
 * Create Listing
 * Edit Listing
 
@@ -167,7 +135,6 @@ Add screenshots of:
 You can deploy the application using:
 
 * Frontend: Vercel
-* Backend: Render
 * Database: MongoDB Atlas
 
 ⸻
@@ -178,12 +145,3 @@ Mohit Singh
 
 GitHub: https://github.com/mohitsingh9685
 
-LinkedIn: (Add your LinkedIn profile URL here)
-
-LeetCode: (Add your LeetCode profile URL here)
-
-⸻
-
-📄 License
-
-This project is intended for educational and portfolio purposes.
